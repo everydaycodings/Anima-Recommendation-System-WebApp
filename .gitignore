@@ -8,6 +8,7 @@ Datasets/UPI_Payment_Apps_review/
 
 # files
 # Distribution / packaging
+testing/
 test.ipynb
 model/
 .Python
