@@ -1,10 +1,16 @@
 import pandas as pd
 import pickle
 import numpy as np
+import streamlit as st
 
-data = pd.read_csv("data/anime_output.csv")
-model = pickle.load(open("model/model.pkl", 'rb'))
-piviot_table = pickle.load(open("model/piviot_table.pkl", 'rb'))
+@st.cache(allow_output_mutation=True)
+def load_model():
+    data = pd.read_csv("data/anime_output.csv")
+    model = pickle.load(open("model/model.pkl", 'rb'))
+    piviot_table = pickle.load(open("model/piviot_table.pkl", 'rb'))
+    return data, model, piviot_table
+
+data, model, piviot_table = load_model()
 
 def fetch_data_for_options():
 
