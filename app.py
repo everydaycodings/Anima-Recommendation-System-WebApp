@@ -17,6 +17,7 @@ if st.button("Recommend"):
         st.subheader(recommend_list[0])
         st.image(recommend_poster_list[0])
 
+
     with col2:
         st.subheader(recommend_list[1])
         st.image(recommend_poster_list[1])

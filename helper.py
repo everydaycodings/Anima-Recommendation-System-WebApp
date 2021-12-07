@@ -6,14 +6,22 @@ import streamlit as st
 import requests
 import json
 
+
+@st.experimental_memo
+def load_data():
+    data = pd.read_csv("data/Anime_data.csv")
+    return data
+
+data = load_data()
+
+
 @st.cache(allow_output_mutation=True)
 def load_model():
-    data = pd.read_csv("data/Anime_data.csv")
     model = pickle.load(open("model/model.pkl", 'rb'))
     piviot_table = pickle.load(open("model/piviot_table.pkl", 'rb'))
-    return data, model, piviot_table
+    return model, piviot_table
 
-data, model, piviot_table = load_model()
+model, piviot_table = load_model()
 
 def fetch_data_for_options():
 
@@ -47,7 +55,7 @@ def api_fetching(selected_anime):
 
 def recommend(movie_name):
 
-    anime_id = anime_id  = np.where(piviot_table.index == movie_name)[0][0]
+    anime_id =  np.where(piviot_table.index == movie_name)[0][0]
 
     query = piviot_table.iloc[anime_id, :].values.reshape(1, -1)
     distance, suggestions = model.kneighbors(query, n_neighbors=6)
