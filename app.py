@@ -9,18 +9,26 @@ selected_anime_name = st.selectbox("Enter The Name of the Anime", options = help
 
 if st.button("Recommend"):
     movie_name, recommend_list, recommend_poster_list = helper.recommend(selected_anime_name)
-    st.write(movie_name)
+    st.header(movie_name)
     
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4, col5 = st.columns(5)
 
     with col1:
-        st.header("A cat")
-        st.image("https://static.streamlit.io/examples/cat.jpg")
+        st.subheader(recommend_list[0])
+        st.image(recommend_poster_list[0])
 
     with col2:
-        st.header("A dog")
-        st.image("https://static.streamlit.io/examples/dog.jpg")
+        st.subheader(recommend_list[1])
+        st.image(recommend_poster_list[1])
 
     with col3:
-        st.header("An owl")
-        st.image("https://static.streamlit.io/examples/owl.jpg")
+        st.subheader(recommend_list[2])
+        st.image(recommend_poster_list[2])
+    
+    with col4:
+        st.subheader(recommend_list[3])
+        st.image(recommend_poster_list[3])
+    
+    with col5:
+        st.subheader(recommend_list[4])
+        st.image(recommend_poster_list[4])
