@@ -1,17 +1,6 @@
 import streamlit as st
 import helper
 
-st.set_page_config(
-     page_title="Anime Recommender System",
-     page_icon="🧊",
-     layout="wide",
-     initial_sidebar_state="expanded",
-     menu_items={
-         'Get Help': 'https://github.com/everydaycodings/Anima-Recommendation-System-WebApp#readme',
-         'Report a bug': "https://github.com/everydaycodings/Anima-Recommendation-System-WebApp/issues/new/choose",
-         'About': "# This is a header. This is an *extremely* cool app!"
-     }
- )
 
 st.image("https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format")
 st.title("Anime Recommender System") 
