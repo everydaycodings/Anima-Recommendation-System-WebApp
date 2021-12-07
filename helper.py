@@ -21,6 +21,7 @@ st.set_page_config(
 
 @st.experimental_memo
 def load_data():
+
     data = pd.read_csv("data/anime_output10m.csv")
     return data
 
@@ -29,8 +30,10 @@ data = load_data()
 
 @st.cache(allow_output_mutation=True)
 def load_model():
+
     model = pickle.load(open("model/model10m.pkl", 'rb'))
     piviot_table = pickle.load(open("model/piviot_table10m.pkl", 'rb'))
+
     return model, piviot_table
 
 model, piviot_table = load_model()
@@ -38,6 +41,7 @@ model, piviot_table = load_model()
 def fetch_data_for_options():
 
     options = data["Name"].values
+
     return options
 
 
@@ -106,13 +110,14 @@ def recommend(movie_name):
 
 
     for i in range(0, len(distance.flatten())):
+
         if i == 0:
             movie_name ='Recommendations for {0}:\n'.format(piviot_table.index[anime_id])
+
         else:
             recommend_list.append('{}'.format(piviot_table.index[suggestions.flatten()[i]]))
             recommend_poster_list.append(api_fetching(piviot_table.index[suggestions.flatten()[i]]))
             recommend_anime_url.append(api_fetching_url(piviot_table.index[suggestions.flatten()[i]]))
-            print(piviot_table.index[suggestions.flatten()[i]])
         
     return movie_name, recommend_list, recommend_poster_list, recommend_anime_url
     
