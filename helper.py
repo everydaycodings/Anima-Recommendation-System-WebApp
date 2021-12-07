@@ -30,33 +30,38 @@ def fetch_data_for_options():
 
 
 def api_fetching(selected_anime):
-    
-    anime_id = data[data["Name"] == selected_anime].anime_id.values[0]
+    try:
+        anime_id = data[data["Name"] == selected_anime].anime_id.values[0]
 
-    base_url = "https://api.jikan.moe/v3/anime/{}".format(anime_id)
+        base_url = "https://api.jikan.moe/v3/anime/{}".format(anime_id)
 
-    headersList = {
-    "Accept": "*/*",
-    "User-Agent": "Thunder Client (https://www.thunderclient.io)" 
-    }
+        headersList = {
+        "Accept": "*/*",
+        "User-Agent": "Thunder Client (https://www.thunderclient.io)" 
+        }
 
-    payload = ""
+        payload = ""
 
-    response = requests.request("GET", base_url, data=payload,  headers=headersList).text
-    json_response = json.loads(response)
+        response = requests.request("GET", base_url, data=payload,  headers=headersList).text
+        json_response = json.loads(response)
 
-    url = json_response["url"]
-    image_url = json_response["image_url"]
+        url = json_response["url"]
+        image_url = json_response["image_url"]
 
-    return image_url
+        return image_url
+    except KeyError:
+        st.write("Error: Unable to Fetch the Anime details it may be because of the weak internet connection, PLease try again later or inform the error to the admin.")
 
 
 
 
 def recommend(movie_name):
-
-    anime_id =  np.where(piviot_table.index == movie_name)[0][0]
-
+    try:
+        anime_id =  np.where(piviot_table.index == movie_name)[0][0]
+    
+    except IndexError:
+        st.error("Error: The Anime which you are Searching for is not in our database, please try out another Anime.")
+    
     query = piviot_table.iloc[anime_id, :].values.reshape(1, -1)
     distance, suggestions = model.kneighbors(query, n_neighbors=6)
 
@@ -70,5 +75,7 @@ def recommend(movie_name):
             recommend_list.append('{}'.format(piviot_table.index[suggestions.flatten()[i]]))
             recommend_poster_list.append(api_fetching(piviot_table.index[suggestions.flatten()[i]]))
             print(piviot_table.index[suggestions.flatten()[i]])
-
+        
     return movie_name, recommend_list, recommend_poster_list
+    
+
