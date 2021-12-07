@@ -66,6 +66,29 @@ def api_fetching(selected_anime):
 
 
 
+def api_fetching_url(selected_anime):
+    try:
+        anime_id = data[data["Name"] == selected_anime].anime_id.values[0]
+
+        base_url = "https://api.jikan.moe/v3/anime/{}".format(anime_id)
+
+        headersList = {
+        "Accept": "*/*",
+        "User-Agent": "Thunder Client (https://www.thunderclient.io)" 
+        }
+
+        payload = ""
+
+        response = requests.request("GET", base_url, data=payload,  headers=headersList).text
+        json_response = json.loads(response)
+
+        url = json_response["url"]
+        image_url = json_response["image_url"]
+
+        return url
+    except KeyError:
+        st.write("Error: Unable to Fetch the Anime details it may be because of the weak internet connection, PLease try again later or inform the error to the admin.")
+
 
 def recommend(movie_name):
     try:
@@ -79,6 +102,8 @@ def recommend(movie_name):
 
     recommend_list = []
     recommend_poster_list = []
+    recommend_anime_url = []
+
 
     for i in range(0, len(distance.flatten())):
         if i == 0:
@@ -86,8 +111,9 @@ def recommend(movie_name):
         else:
             recommend_list.append('{}'.format(piviot_table.index[suggestions.flatten()[i]]))
             recommend_poster_list.append(api_fetching(piviot_table.index[suggestions.flatten()[i]]))
+            recommend_anime_url.append(api_fetching_url(piviot_table.index[suggestions.flatten()[i]]))
             print(piviot_table.index[suggestions.flatten()[i]])
         
-    return movie_name, recommend_list, recommend_poster_list
+    return movie_name, recommend_list, recommend_poster_list, recommend_anime_url
     
 
