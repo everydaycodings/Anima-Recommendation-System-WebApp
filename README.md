@@ -41,13 +41,13 @@ Actually, you don't have to get any API Key for **myanimelist.net** as it is fre
 
 ## Source to the Pre-trained Modles and Datasets
 ### Sources of the datasets 
-1) original source: [Download Data](https://www.kaggle.com/hernan4444/anime-recommendation-database-2020), in This datasets there are arround 109Million records.
+1) Original source: [Download Data](https://www.kaggle.com/hernan4444/anime-recommendation-database-2020), in This datasets there are arround 109Million records.
 
 ### Source to the Trained Model
 If you don't want to download dataset and train it then i have uploaded the prebuild models, You can use that.
-1) if you wat the **smaller** version of the model, THen i have trained **10million** records and uploaded it you can download it by [clicking here](https://mega.nz/file/FKoRVI6K#hbHMdIPV8keuAmb0Nhhu9tCjkgn7Q2U2zydAFD2dloY)
-2) if you wat the **medium** version of the model, THen i have trained **20million** records and uploaded it you can download it by [clicking here](https://mega.nz/file/ZSwzQKLR#Aj4wP6nKXUzfeudeXfUkw3vi3thgbS9W1GbI682epNM)
-3) if you wat the **large** version of the model, THen i have trained **50million** records and uploaded it you can download it by [clicking here](https://mega.nz/file/tagAgSaT#1vQ88TQDJfcIL6iZ6pwVUG3IYVMdOYQWRzSgO3utEF4)
+1) If you wat the **smaller** version of the model, THen i have trained **10million** records and uploaded it you can download it by [clicking here](https://mega.nz/file/FKoRVI6K#hbHMdIPV8keuAmb0Nhhu9tCjkgn7Q2U2zydAFD2dloY)
+2) If you wat the **medium** version of the model, THen i have trained **20million** records and uploaded it you can download it by [clicking here](https://mega.nz/file/ZSwzQKLR#Aj4wP6nKXUzfeudeXfUkw3vi3thgbS9W1GbI682epNM)
+3) If you wat the **large** version of the model, THen i have trained **50million** records and uploaded it you can download it by [clicking here](https://mega.nz/file/tagAgSaT#1vQ88TQDJfcIL6iZ6pwVUG3IYVMdOYQWRzSgO3utEF4)
 
 ### Note: The WebApp uses 10Million records so you can check the accuracy of 10Million records model by using the WebApp.
 ### Note: I couldn't train all 109Million records because of my pc limitation so I don't have a model for 109million records.
