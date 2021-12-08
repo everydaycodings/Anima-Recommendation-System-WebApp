@@ -11,7 +11,7 @@
 Check out the live demo: https://mrswsa.herokuapp.com/
 
 ### Vedio demo:
-<p><img align="right" alt="GIF" src="https://github.com/mitul3737/mitul3737/blob/main/github%20readme.gif" width="500" height="350" /></p>-->
+<p><img align="right" alt="GIF" src="https://github.com/everydaycodings/Anima-Recommendation-System-WebApp/blob/master/images/2.gif" width="500" height="350" /></p>-->
 
 # Note
 
