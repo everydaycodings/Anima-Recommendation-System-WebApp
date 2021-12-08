@@ -39,12 +39,12 @@ Actually, you don't have to get any API Key for **myanimelist.net** as it is fre
 ![IMG-20210306-WA0012](https://raw.githubusercontent.com/everydaycodings/Anima-Recommendation-System-WebApp/master/images/1.png)
 
 
-
+## Source to the Pre-trained Modles and Datasets
 ### Sources of the datasets 
-1) original source: [Download Data](https://www.kaggle.com/hernan4444/anime-recommendation-database-2020), iN THIS datasets there are arround 109Million records.
+1) original source: [Download Data](https://www.kaggle.com/hernan4444/anime-recommendation-database-2020), in This datasets there are arround 109Million records.
 
-## Source to the Trained Model
-If you don't want to download model and train it then i have uploaded the prebuild models, You can use that.
+### Source to the Trained Model
+If you don't want to download dataset and train it then i have uploaded the prebuild models, You can use that.
 1) if you wat the **smaller** version of the model, THen i have trained **10million** records and uploaded it you can download it by [clicking here](https://mega.nz/file/FKoRVI6K#hbHMdIPV8keuAmb0Nhhu9tCjkgn7Q2U2zydAFD2dloY)
 2) if you wat the **medium** version of the model, THen i have trained **20million** records and uploaded it you can download it by [clicking here](https://mega.nz/file/ZSwzQKLR#Aj4wP6nKXUzfeudeXfUkw3vi3thgbS9W1GbI682epNM)
 3) if you wat the **large** version of the model, THen i have trained **50million** records and uploaded it you can download it by [clicking here](https://mega.nz/file/tagAgSaT#1vQ88TQDJfcIL6iZ6pwVUG3IYVMdOYQWRzSgO3utEF4)
