@@ -8,7 +8,7 @@
 **Collaborative filtering systems** use the actions of users to recommend other movies. In general, they can either be user-based or item-based. Item based approach is usually preferred over **user-based approach.** User-based approach is often harder to scale because of the dynamic nature of users, whereas items usually don’t change much, and item based approach often can be computed offline and served without constantly re-training.
 
 
-Check out the live demo: https://mrswsa.herokuapp.com/
+Check out the live demo: https://anime-recommendation-model.herokuapp.com
 
 ### Vedio demo:
 <p><img  alt="GIF" src="https://github.com/everydaycodings/Anima-Recommendation-System-WebApp/blob/master/images/2.gif" width="800" height="450" /></p>
