@@ -22,7 +22,7 @@ st.set_page_config(
 @st.experimental_memo
 def load_data():
 
-    data = pd.read_csv("data/anime_output10m.csv")
+    data = pd.read_csv("data/anime_data.csv")
     return data
 
 data = load_data()
@@ -31,8 +31,8 @@ data = load_data()
 @st.cache(allow_output_mutation=True)
 def load_model():
 
-    model = pickle.load(open("model/model10m.pkl", 'rb'))
-    piviot_table = pickle.load(open("model/piviot_table10m.pkl", 'rb'))
+    model = pickle.load(open("model/model.pkl", 'rb'))
+    piviot_table = pickle.load(open("model/piviot_table.pkl", 'rb'))
 
     return model, piviot_table
 
