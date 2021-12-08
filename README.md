@@ -29,7 +29,7 @@ Actually, you don't have to get any API Key for **myanimelist.net** as it is fre
 
 1. Clone or download this repository to your local machine.
 2. Install all the libraries mentioned in the [requirements.txt](https://github.com/everydaycodings/Anima-Recommendation-System-WebApp/blob/master/requirements.txt) file with the command `pip3 install -r requirements.txt`
-3. Download the Data from the [given link](https://github.com/everydaycodingsAnima-Recommendation-System-WebApp#source-to-the-pre-trained-modles-and-datasets). And create a data and model folder in the project home directory.
+3. Download the Data from the Given Link Below. And create a data and model folder in the project home directory.
 4. Past the CSV File inside data folder and .pkl extension file to your model folder
 4. Open your terminal/command prompt from your project directory and run the file `app.py` by executing the command `streamlit run app.py`.
 5. You will be automatically redirected the your localhost in brower where you can see you WebApp in live.
