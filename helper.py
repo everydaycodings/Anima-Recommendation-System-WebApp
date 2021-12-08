@@ -10,7 +10,6 @@ st.set_page_config(
      page_title="Anime Recommender System",
      page_icon="🧊",
      layout="wide",
-     initial_sidebar_state="expanded",
      menu_items={
          'Get Help': 'https://github.com/everydaycodings/Anima-Recommendation-System-WebApp#readme',
          'Report a bug': "https://github.com/everydaycodings/Anima-Recommendation-System-WebApp/issues/new/choose",
