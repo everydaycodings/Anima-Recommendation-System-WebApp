@@ -15,7 +15,7 @@ Check out the live demo: https://anime-recommendation-model.herokuapp.com
 
 # Note
 
-> #### Use this URL - [Click Me](https://github.com/everydaycodings/Anima-Recommendation-System-WebApp#source-to-the-pre-trained-modles-and-datasets) - in case if you are faccing any problem with th eweb app or source code.
+> #### Use this URL - [Click Me](https://github.com/everydaycodings/Anima-Recommendation-System-WebApp/issues/new) - in case if you are faccing any problem with th WebApp or source code.
 
 
 
